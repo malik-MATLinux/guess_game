@@ -16,13 +16,13 @@ int main(){
     int max = 100;
 
     int answer = (rand() % (max - min + 1)) + min;
-
+    // printf("The answer is: %d\n", answer); // Uncomment for debugging purposes
     printf("######### Welcome to the game of guessing numbers ########\n\n");
     
     printf("        £nter your gu£$$    :");
     scanf("%d", &input);
 
-    guess(input, answer, attempts, chances);
+    guess(input, answer, attempts, chances); // Function call to start the guessing game
     return 0;
 }
 
@@ -37,7 +37,7 @@ void guess(int input, int answer, int attempts, int chances){
             else if (input < answer)
             {
                 printf("Your guess is too low. Try again:   ");
-                attempts ++;
+                attempts ++; // Increment attempts
                 scanf("%d", &input);
             }
             else if (input > answer)
@@ -47,7 +47,7 @@ void guess(int input, int answer, int attempts, int chances){
                 scanf("%d", &input);
             }
             else
-            {
+            {   // This else block is technically unreachable due to previous conditions, only reach here if attempts exceed chances
                 if (attempts >= chances && attempts <= chances)
                 {
                     printf("Sorry, you've used all your attempts. The correct answer was %d.\n\n\n\n", answer);
