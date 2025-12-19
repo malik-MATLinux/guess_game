@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 void guess(int input, int answer, int attempts, int chances);
 
@@ -17,7 +18,11 @@ int main(){
 
     int answer = (rand() % (max - min + 1)) + min;
     // printf("The answer is: %d\n", answer); // Uncomment for debugging purposes
-    printf("######### Welcome to the game of guessing numbers ########\n\n");
+    char userName[30];
+    printf("Enter your name: ");
+    fgets(userName, sizeof(userName), stdin); // Read user name input.
+
+    printf("###### Welcome to the game of guessing numbers %s #####\n\n", userName);
     
     printf("        £nter your gu£$$    :");
     scanf("%d", &input);
