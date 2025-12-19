@@ -24,6 +24,11 @@ int main(){
 
     guess(input, answer, attempts, chances); // Function call to start the guessing game
     return 0;
+
+    /*
+      The game has a bug of where if the user guesses wrong more than 15 times, the game ends but does not notify the user that they have used all their attempts.
+      This needs to be fixed in the next version.
+    */
 }
 
 void guess(int input, int answer, int attempts, int chances){
