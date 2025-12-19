@@ -56,16 +56,7 @@ void guess(int input, int answer, int attempts, int chances){
                     printf("OH OH..... Wrong guess, Try again:   ");
                     attempts ++;
                     scanf("%d", &input); 
-                }
-                
-                
+                }                
             }
-            
-            
         }
-}
-
-void cald_attempts(int total_attempts){
-
-
 }
